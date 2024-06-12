@@ -14,7 +14,7 @@
                 <div class="row gx-4 mb-2">
                     <div class="col-auto">
                         <div class="avatar avatar-xl position-relative">
-                            <img src="{{ asset('assets') }}/img/bruce-mars.jpg" alt="profile_image"
+                            <img src="{{ asset('assets') }}/img/illustrations/profil.jpeg" alt="profile_image"
                                 class="w-100 border-radius-lg shadow-sm">
                         </div>
                     </div>
@@ -24,11 +24,10 @@
                                 {{ auth()->user()->name }}
                             </h5>
                             <p class="mb-0 font-weight-normal text-sm">
-                                CEO / Co-Founder
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
+                    <!--<div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
                         <div class="nav-wrapper position-relative end-0">
                             <ul class="nav nav-pills nav-fill p-1" role="tablist">
                                 <li class="nav-item">
@@ -55,12 +54,12 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="card card-plain h-100">
                     <div class="card-header pb-0 p-3">
                         <div class="row">
                             <div class="col-md-8 d-flex align-items-center">
-                                <h6 class="mb-3">Profile Information</h6>
+                                <h6 class="mb-3">Informations</h6>
                             </div>
                         </div>
                     </div>
@@ -92,7 +91,7 @@
                             <div class="row">
                                 
                                 <div class="mb-3 col-md-6">
-                                    <label class="form-label">Email address</label>
+                                    <label class="form-label">Adresse mail</label>
                                     <input type="email" name="email" class="form-control border border-2 p-2" value='{{ old('email', auth()->user()->email) }}'>
                                     @error('email')
                                 <p class='text-danger inputerror'>{{ $message }} </p>
@@ -100,7 +99,7 @@
                                 </div>
                                 
                                 <div class="mb-3 col-md-6">
-                                    <label class="form-label">Name</label>
+                                    <label class="form-label">Nom</label>
                                     <input type="text" name="name" class="form-control border border-2 p-2" value='{{ old('name', auth()->user()->name) }}'>
                                     @error('name')
                                 <p class='text-danger inputerror'>{{ $message }} </p>
@@ -108,7 +107,7 @@
                                 </div>
                                
                                 <div class="mb-3 col-md-6">
-                                    <label class="form-label">Phone</label>
+                                    <label class="form-label">Numéro de téléphone</label>
                                     <input type="number" name="phone" class="form-control border border-2 p-2" value='{{ old('phone', auth()->user()->phone) }}'>
                                     @error('phone')
                                     <p class='text-danger inputerror'>{{ $message }} </p>
@@ -116,24 +115,25 @@
                                 </div>
                                 
                                 <div class="mb-3 col-md-6">
-                                    <label class="form-label">Location</label>
+                                    <label class="form-label">Adresse</label>
                                     <input type="text" name="location" class="form-control border border-2 p-2" value='{{ old('location', auth()->user()->location) }}'>
                                     @error('location')
                                     <p class='text-danger inputerror'>{{ $message }} </p>
                                     @enderror
                                 </div>
                                 
-                                <div class="mb-3 col-md-12">
+                                <!--<div class="mb-3 col-md-12">
                                     <label for="floatingTextarea2">About</label>
                                     <textarea class="form-control border border-2 p-2"
                                         placeholder=" Say something about yourself" id="floatingTextarea2" name="about"
-                                        rows="4" cols="50">{{ old('about', auth()->user()->about) }}</textarea>
+                                        ro
+                                        s="4" cols="50">{{ old('about', auth()->user()->about) }}</textarea>
                                         @error('about')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                         @enderror
-                                </div>
+                                </div>-->
                             </div>
-                            <button type="submit" class="btn bg-gradient-dark">Submit</button>
+                            <button type="submit" class="btn bg-gradient-dark">Modifier</button>
                         </form>
 
                     </div>

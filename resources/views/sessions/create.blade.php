@@ -1,13 +1,13 @@
 <x-layout bodyClass="bg-gray-200">
 
         <div class="container position-sticky z-index-sticky top-0">
-            <div class="row">
+            <!--<div class="row">
                 <div class="col-12">
-                    <!-- Navbar -->
+                     Navbar 
                     <x-navbars.navs.guest signin='login' signup='register'></x-navbars.navs.guest>
-                    <!-- End Navbar -->
+                     End Navbar 
                 </div>
-            </div>
+            </div>-->
         </div>
         <main class="main-content  mt-0">
             <div class="page-header align-items-start min-vh-100"
@@ -19,12 +19,12 @@
                             <div class="card z-index-0 fadeIn3 fadeInBottom">
                                 <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                                     <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-                                        <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Sign in</h4>
+                                        <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">S'inscrire'</h4>
                                         <div class="row mt-3">
                                             <h6 class='text-white text-center'>
-                                                <span class="font-weight-normal">Email:</span> admin@material.com
+                                                <span class="font-weight-normal">Email</span> 
                                                 <br>
-                                                <span class="font-weight-normal">Password:</span> secret</h6>
+                                                <span class="font-weight-normal">Mot de passe</span></h6>
                                             <div class="col-2 text-center ms-auto">
                                                 <a class="btn btn-link px-3" href="javascript:;">
                                                     <i class="fa fa-facebook text-white text-lg"></i>
@@ -57,36 +57,34 @@
                                         @endif
                                         <div class="input-group input-group-outline mt-3">
                                             <label class="form-label">Email</label>
-                                            <input type="email" class="form-control" name="email" value="{{ 'admin@material.com' }}">
+                                            <input type="email" class="form-control" name="email" value="">
                                         </div>
                                         @error('email')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                         @enderror
                                         <div class="input-group input-group-outline mt-3">
-                                            <label class="form-label">Password</label>
-                                            <input type="password" class="form-control" name="password" value='{{ 'secret'}}'>
+                                            <label class="form-label">Mot de passe</label>
+                                            <input type="password" class="form-control" name="password">
                                         </div>
                                         @error('password')
                                         <p class='text-danger inputerror'>{{ $message }} </p>
                                         @enderror
                                         <div class="form-check form-switch d-flex align-items-center my-3">
                                             <input class="form-check-input" type="checkbox" id="rememberMe">
-                                            <label class="form-check-label mb-0 ms-2" for="rememberMe">Remember
-                                                me</label>
+                                            <label class="form-check-label mb-0 ms-2" for="rememberMe">Se rappeler de moi</label>
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Sign
-                                                in</button>
+                                            <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Se connecter</button>
                                         </div>
                                         <p class="mt-4 text-sm text-center">
-                                            Don't have an account?
+                                            n'avez-vous pas de compte?
                                             <a href="{{ route('register') }}"
-                                                class="text-primary text-gradient font-weight-bold">Sign up</a>
+                                                class="text-primary text-gradient font-weight-bold">S'inscrire</a>
                                         </p>
                                         <p class="text-sm text-center">
-                                            Forgot your password? Reset your password
+                                            Mot de passe oublié? Mettre à jour votre mot de passe
                                             <a href="{{ route('verify') }}"
-                                                class="text-primary text-gradient font-weight-bold">here</a>
+                                                class="text-primary text-gradient font-weight-bold">ici</a>
                                         </p>
                                     </form>
                                 </div>

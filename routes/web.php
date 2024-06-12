@@ -16,11 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
+
+
             
 
 Route::get('/', function () {return redirect('sign-in');})->middleware('guest');
@@ -69,4 +76,18 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('user-profile', function () {
 		return view('pages.laravel-examples.user-profile');
 	})->name('user-profile');
+	Route::get('user-management', [DashboardController::class, 'userManagement'])->name('user-management');
+	Route::get('user-management/create', [UserController::class, 'create'])->name('user.create');
+	Route::post('user-management', [UserController::class, 'store'])->name('user.store');
+    Route::get('user-management/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
+	Route::post('user-management/{id}/update', [UserController::class, 'update'])->name('user.update');
+	Route::delete('user-management/{id}', [UserController::class, 'destroy'])->name('user.destroy');
+
+	// les routes de la page d'accueil
+	Route::get('/', [HomeController::class, 'index'])->name('home');
+
+	//Tarif
+	Route::post('tarifs', [TarifController::class, 'store'])->name('tarifs.store');
+
+
 });
