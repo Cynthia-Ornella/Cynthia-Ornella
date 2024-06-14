@@ -27,6 +27,14 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link text-white {{ $activePage == 'tarifs' ? ' active bg-gradient-primary' : '' }}" href="{{ route('tarifs.index') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i style="font-size: 1rem;" class="fas fa-lg fa-dollar-sign ps-2 pe-2 text-center"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Tarifs</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link text-white {{ $activePage == 'user-profile' ? 'active bg-gradient-primary' : '' }} "
                     href="{{ route('user-profile') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
