@@ -17,7 +17,7 @@ class CreateTarifsTable extends Migration
             $table->id();
             $table->string('name');
             $table->decimal('price', 8, 2);
-            $table->string('duration'); // duration in hours
+            $table->integer('duration'); // duration in hours
             $table->timestamps();
         });
     }

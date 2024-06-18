@@ -27,6 +27,8 @@ use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TarifController;
+use App\Http\Controllers\PaymentController;
+
 
 
             
@@ -91,6 +93,10 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/tarifs', [TarifController::class, 'index'])->name('tarifs.index');
 	Route::get('tarifs/create', [TarifController::class, 'create'])->name('tarifs.create');
 	Route::post('tarifs', [TarifController::class, 'store'])->name('tarifs.store');
+
+	//Paiement
+	Route::get('payment', [PaymentController::class, 'create'])->name('payment.create');
+	Route::post('payment', [PaymentController::class, 'store'])->name('payment.store');
 
 
 });

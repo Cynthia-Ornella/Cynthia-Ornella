@@ -20,11 +20,11 @@
                         </div>
                         <div class="card-body px-0 pb-2">
                             <div class="table-responsive p-0">
+                                
                             <h1>Liste des Tarifs</h1>
                                 <table class="table align-items-center mb-0">
                                     <thead>
                                         <tr>
-                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID</th>
                                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">NOM</th>
                                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">PRIX</th>
                                             <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">DUREE (en heure) </th>
@@ -36,13 +36,6 @@
                                 <tbody>
                                     @foreach ($tarifs as $tarif)
                                     <tr>
-                                        <td>
-                                            <div class="d-flex px-2 py-1">
-                                                <div class="d-flex flex-column justify-content-center">
-                                                    <p class="mb-0 text-sm">{{ $tarif->id }}</p>
-                                                </div>
-                                            </div>
-                                        </td>
                                         <td>
                                             <div class="d-flex flex-column justify-content-center">
                                                 <h6 class="mb-0 text-sm">{{ $tarif->name }}</h6>
